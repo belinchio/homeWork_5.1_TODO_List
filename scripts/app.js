@@ -5,8 +5,10 @@ const showAllButton = document.getElementById("showAll");
 const showCompletedButton = document.getElementById("showCompleted");
 const showActiveButton = document.getElementById("showActive");
 
+// Массив для хранения задач
 let tasks = [];
 
+// Функция вывода задач
 const refreshTaskList = (filter = "all") => {
     taskList.innerHTML = "";
     const filteredTasks = tasks.filter((task) => {
@@ -37,25 +39,29 @@ const refreshTaskList = (filter = "all") => {
     });
 };
 
+// Функция добавления задачи
 const addTask = () => {
     const taskText = taskInput.value.trim();
     if (taskText) {
-        tasks.push({text: taskText, completed: false});
+        tasks.push({text: taskText, completed: false}); // Добавляем задачу в массив в виде объекта
         taskInput.value = "";
         refreshTaskList();
     }
 };
 
+// Функция пометки задачи выполнено/невыполнено
 const toggleComplete = (index) => {
     tasks[index].completed = !tasks[index].completed;
     refreshTaskList();
 };
 
+// Функция для удаления задачи
 const deleteTask = (index) => {
     tasks.splice(index, 1);
     refreshTaskList();
 };
 
+// Обработчики событий
 showAllButton.addEventListener("click", () => refreshTaskList("all"));
 showCompletedButton.addEventListener("click", () => refreshTaskList("completed"));
 showActiveButton.addEventListener("click", () => refreshTaskList("active"));
