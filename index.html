@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TODO List</title>
+	<link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+<div class="container">
+	<h1>Список задач</h1>
+	<div class="input">
+		<input type="text" id="taskInput" placeholder="Введите новую задачу...">
+		<button id="addTaskButton">Добавить задачу</button>
+	</div>
+
+	<div class="buttons">
+		<button id="showAll">Показать все</button>
+		<button id="showCompleted">Показать выполненые</button>
+		<button id="showActive">Показать невыполненые</button>
+	</div>
+	<ol id="taskList"></ol>
+</div>
+<script src="./scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+:root {
+    --main-color: #23cfcd;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-size: 100vw 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    color: var(--main-color);
+    max-width: 750px;
+    margin: 0;
+    background: none;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.input {
+    display: flex;
+    height: 40px;
+}
+
+input {
+    width: calc(100% - 100px);
+    padding: 5px;
+    margin-right: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+
+
+button {
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    /*width: calc(100% / 3);*/
+    height: 40px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.buttons button {
+    width: calc(100% / 3);
+}
+
+ol {
+    /*list-style-type: none;*/
+    padding: 0;
+}
+
+ol > li > button {
+    width: 150px;
+    height: 40px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-style: italic;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li.edit {
+    cursor: pointer;
+    color: var(--main-color);
+
+}
+
+.delete {
+    cursor: pointer;
+    color: red;
+}
